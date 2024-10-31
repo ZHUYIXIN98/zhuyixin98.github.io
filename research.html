@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
-  <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
+<head>
+    <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Zhu Yixin's Personal Website</title>
@@ -13,152 +13,129 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-29643011-3', 'auto');
-      ga('send', 'pageview');
-    </script>
-
-    <!-- New GA4 tracking code, see https://support.google.com/analytics/answer/10271001#analyticsjs-enable-basic --> 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GNJD50R0Z7"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-GNJD50R0Z7');
-    </script>
-
-    <!-- For all browsers -->
-    <link rel="stylesheet" href="assets/css/academicons.min.css"/>
-    <link rel="stylesheet" href="assets/css/academicons.css"/>
-
     <style>
-      button.accordion {
-      font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-      cursor: pointer;
-      padding: 0px;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 100%;
-      transition: 0.3s;
-      background-color: #f8f8f8;
-      }
-      button.accordion.active, button.accordion:hover {
-      background-color: #f8f8f8;
-      }
-      button.accordion:after {
-      content: " [+] ";
-      font-size: 90%;
-      color:#777;
-      float: left;
-      margin-left: 1px;
-      }
+        /* Flexbox container for columns */
+        .content {
+            display: flex;
+            gap: 20px; /* Space between columns */
+        }
 
-      button.accordion.active:after {
-      content: " [\2212] ";
-      }
-      div.panel {
-      padding: 0 20px;
-      margin-top: 5px;
-      display: none;
-      background-color: white;
-      font-size: 100%;
-      }
-      div.panel.show {
-      display: block !important;
-      }
-      .social-row { 
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
+        /* Left column for header and navigation */
+        .column-left {
+            flex: 1; /* Left column takes 1 part */
+            padding: 10px;
+        }
+
+        /* Right column for working papers */
+        .column-right {
+            flex: 3; /* Right column takes 3 parts */
+            padding: 10px;
+        }
+
+        button.accordion {
+            font: 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            cursor: pointer;
+            padding: 0px;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 100%;
+            transition: 0.3s;
+            background-color: #f8f8f8;
+        }
+
+        button.accordion.active, button.accordion:hover {
+            background-color: #f8f8f8;
+        }
+
+        button.accordion:after {
+            content: " [+] ";
+            font-size: 90%;
+            color: #777;
+            float: left;
+            margin-left: 1px;
+        }
+
+        button.accordion.active:after {
+            content: " [\2212] ";
+        }
+
+        div.panel {
+            padding: 0 20px;
+            margin-top: 5px;
+            display: none;
+            background-color: white;
+            font-size: 100%;
+        }
+
+        div.panel.show {
+            display: block !important;
+        }
+
+        .social-row { 
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="wrapper">
-      <header>
-        <h1>Zhu Yixin</h1>
-         <p>PhD Candidate<br>Chinese University of Hong kong</p>
-<!--         <p>Research Affiliate<br><a href="http://legacy.iza.org/en/webcontent/personnel/photos/index_html?key=24155">Institute for the Study of Labor (IZA)</a></p> -->
-<!--         <p>Fellow<br><a href="https://glabor.org/user/tyleransom/">Global Labor Organization (GLO)</a></p> -->
-    <h3><a href="https://zhuyixin98.github.io/">Home</a></h3>
-        <h3><a href="https://zhuyixin98.github.io/research.html">Research</a></h3>  
-<!--         <h3><a href="https://zhuyixin98.github.io/code.html">Code</a></h3> -->
-<!--          <h3><a href="https://zhuyixin98.github.io/teaching.html">Teaching</a></h3>   -->
-         <h3><a href="https://zhuyixin98.github.io/CV (8).pdf">CV</a></h3> 
- <!--         <h3><a href="https://zhuyixin98.github.io/personal.html">Personal</a></h3> -->
- <!--     <b>Social</b><br>-->
-        <br>
-        <div class="social-row">
-<!--          <a href="https://zhuyixin98.github.io" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a><br><p>zhangzhuoluo@xmu.edu.cn</p>-->
- <!--         <a href="" target="_blank"><i class="ai ai-fw ai-google-scholar-square"></i> Scholar </a><br> -->
-<!--           <a href="https://orcid.org/0000-0002-6910-0363"><i class="ai ai-fw ai-orcid-square"></i> ORCID</a><br>-->
-<!--            <a href="http://ideas.repec.org/f/pra541.html"><i class="fa fa-fw fa-share-alt-square"></i> RePEc</a><br>-->
-<!--            <a href="http://github.com/tyleransom"><i class="fa fa-fw fa-github-square"></i> GitHub</a><br>-->
- <!--           <a href="http://twitter.com/tyleransom" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a><br> -->
-<!--           <a href="http://linkedin.com/in/zhuoluo-zhang-b71826272/" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a><br>
-          <br> -->
+        <div class="content">
+            <!-- Left column: Header and Navigation -->
+            <div class="column-left">
+                <header>
+                    <h1>Zhu Yixin</h1>
+                    <p>PhD Candidate<br>Chinese University of Hong Kong</p>
+                    <h3><a href="https://zhuyixin98.github.io/">Home</a></h3>
+                    <h3><a href="https://zhuyixin98.github.io/research.html">Research</a></h3>
+                    <h3><a href="https://zhuyixin98.github.io/CV (8).pdf">CV</a></h3> 
+                    <br>
+                    <div class="social-row">
+                        <!-- Social links can be added here -->
+                    </div>
+                </header>
+            </div>
+
+            <!-- Right column: Working Papers -->
+            <div class="column-right">
+                <section>
+                    <h2><a id="recent-RRs-updated" class="anchor" href="#RRpapers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Working Papers</h2>
+
+                    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4564939">	
+                    Impact of Disruption Risk at Different Supplier Tiers (Previous-used title: Supply Disruption in Multi-Tier Supply Chains: Competition and Network Configuration)</a> <br> with <a href="https://www.bschool.cuhk.edu.hk/staff/zhou-sean-xiang/">Sean Zhou</a>, <a href="https://sites.google.com/view/hongfan-chen/home">Hongfan(Kevin) Chen</a>  <br> <b><i>Under Review</i></b> <br><button class="accordion"> 
+                        Abstract
+                    </button>
+                    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;">
+                        <p>We consider a three-tier supply chain, where a tier-0 firm (OEM) can source from two potential tier-1 suppliers, and each tier-1 supplier can source from two potential tier-2 suppliers. Either a tier-1 or a tier-2 supplier is susceptible to disruption risk. We study the impacts of disruption risk at different supplier tiers on the performance of centralized and decentralized supply chains. We further characterize supplier selection strategies of the OEM and tier-1 suppliers in the presence of fixed sourcing costs...</p>
+                    </div>
+                    <br>
+                    <hr>
+
+                    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4734869">	
+                    Optimal Growth of a Two-Sided Platform with Heterogeneous Agents</a> <br> with <a href="https://www.bschool.cuhk.edu.hk/staff/zhou-sean-xiang/">Sean Zhou</a>, <a href="https://sites.google.com/view/hongfan-chen/home">Hongfan(Kevin) Chen</a>, <a href="https://rphilipzhang.github.io/rphilipzhang/">Renyu Zhang</a>  <br> <b><i>Under Review</i></b> <br><button class="accordion"> 
+                        Abstract
+                    </button>
+                    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;">
+                        <p>We consider the dynamics of a two-sided platform, where the agent population on both sides experiences growth over time with heterogeneous growth rates. The compatibility between buyers and sellers is captured by a bipartite network...</p>
+                    </div>
+                    <br>
+                    <hr>
+                </section>
+            </div>
         </div>
-        <br>
-
-<!--     <p><b>Contact:</b><br>Department of Management Science<br>Xiamen University<br>Room 642, Chengfeng Building<br>422, Siming South Road
-<br>Xiamen, Fujian</p>-->
-
-      </header>
-      <section>
-    <h2><a id="recent-RRs-updated" class="anchor" href="#RRpapers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Working Papers </h2>
-
-    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4564939">	
-Impact of Disruption Risk at Different Supplier Tiers (Previous-used title: Supply Disruption in Multi-Tier Supply Chains: Competition and Network Configuration  )</a> <br> with <a href="https://www.bschool.cuhk.edu.hk/staff/zhou-sean-xiang/">Sean Zhou</a>, <a href="https://sites.google.com/view/hongfan-chen/home">Hongfan(Kevin) Chen</a>  <br> <b><i>Under Review </i></b> <br><button class="accordion"> 
-      Abstract
-    </button>
-    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> We consider a three-tier supply chain, where a tier-0 firm (OEM) can source from two potential tier-1 suppliers, and each tier-1 supplier can source from two potential tier-2 suppliers. Either a tier-1 or a tier-2 supplier is susceptible to disruption risk. We study the impacts of disruption risk at different supplier tiers on the performance of centralized and decentralized supply chains. We further characterize supplier selection strategies of the OEM and tier-1 suppliers in the presence of fixed sourcing costs. We formulate the two-stage decision problems (i.e., supplier selection and production stages), then solve the optimal/equilibrium sourcing strategy and production quantities. Our results show that without fixed sourcing costs, the centralized supply chain yields a lower profit under an unreliable tier-1 supplier than an unreliable tier-2 supplier. This result is reversed in the decentralized supply chain if the disruption probability is high. Such insight continues to hold when (1) each tier has multiple firms and more than one unreliable firm in the unreliable supplier tier, and (2) considering more than two supplier tiers of the OEM. With fixed sourcing costs, the centralized system is less inclined to source from an unreliable tier-1 firm than an unreliable tier-2 firm. In the decentralized supply chain, with the increase of fixed sourcing cost, the OEM’s sourcing strategy changes from dual sourcing to single sourcing when a tier-1 supplier is unreliable, but surprisingly, it can switch from single sourcing back to dual sourcing when a tier-2 supplier is unreliable and has very low or high disruption probability. Our results suggest that competition and double marginalization in the decentralized supply chain can alter the relative impact of disruption risk at different supplier tiers on the supply chain’s sourcing strategy and profitability; in addition, these results underscore the importance of supply chain visibility into sub-tier suppliers’ risk profiles.</p></div>
-<!--     <p style="margin:0"><button class="accordion">
-     Other versions
-    </button> -->
-
-     <br>
-
-<hr>
-        
-
-      
-
-
-   <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4734869">	
-Optimal Growth of a Two-Sided Platform with Heterogeneous Agents</a> <br> with <a href="https://www.bschool.cuhk.edu.hk/staff/zhou-sean-xiang/">Sean Zhou</a>, <a href="https://sites.google.com/view/hongfan-chen/home">Hongfan(Kevin) Chen</a>, <a href="https://rphilipzhang.github.io/rphilipzhang/">Renyu Zhang</a>  <br> <b><i>Under Review </i></b> <br><button class="accordion"> 
-  Abstract
-    </button>
-    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> We consider the dynamics of a two-sided platform, where the agent population on both sides experiences growth over time with heterogeneous growth rates. The compatibility between buyers and sellers is captured by a bipartite network. The platform sets commissions to optimize its total profit over $T$ periods, considering the trade-off between short-term profit and growth as well as the spatial imbalances in supply and demand. We design an asymptotically optimal policy with the profit loss upper-bounded by a constant independent of $T$, in contrast with a myopic policy shown to be arbitrarily bad. To obtain this policy, we first develop a single-period benchmark problem that captures the optimal steady state of the platform, then delicately boost the growth of the agent types with the lowest relative population ratio compared with the benchmark in each period. We further examine the impact of the growth potential and the compatibility network structure on the platform's optimal profit, the agents' payment/income, and the optimal commissions at the optimal steady state. To achieve that, we introduce innovative metrics to quantify the long-run growth potential of each agent type. Using these metrics, we first show that a ``balanced" compatibility network, where the relative long-run growth potential between sellers and buyers for all submarkets is the same as that for the entire market, allows the platform to achieve maximum profitability.  For each agent type, higher ratios of their compatible counterparts' long-run growth potential to their own cause lower payments/higher income. Finally, the impact of the relative long-run growth potential on the optimal commissions in a submarket depends on the convexity/concavity of the value distribution function of agents.  Our study provides insight into how the growth potential and compatibility network structure jointly influence the commission policy in the growth process and the optimal steady state.</p></div>
-<!--     <p style="margin:0"><button class="accordion">
-     Other versions
-    </button> -->
-
-<!--     <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="http://www.nber.org/papers/w22325">NBER Working Paper No. 22325</a> (June 2016) </p></div> -->
-    <br>
-      
-    <hr>
-
-
-
-      </section>
     </div>
     <script src="javascripts/scale.fix.js"></script>
     <script> 
-    var acc = document.getElementsByClassName("accordion");
-    var i;
+        var acc = document.getElementsByClassName("accordion");
+        var i;
 
-    for (i = 0; i < acc.length; i++) {
-        acc[i].onclick = function(){
-            this.classList.toggle("active");
-            this.parentNode.nextElementSibling.classList.toggle("show");
-      }
-    }
+        for (i = 0; i < acc.length; i++) {
+            acc[i].onclick = function() {
+                this.classList.toggle("active");
+                this.parentNode.nextElementSibling.classList.toggle("show");
+            }
+        }
     </script>
-  </body>
+</body>
 </html>
