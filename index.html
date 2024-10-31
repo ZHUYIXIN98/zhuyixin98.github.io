@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,51 +9,55 @@
     <link rel="stylesheet" href="stylesheets/github-light.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     <style>
-      /* Flexbox container for columns */
-      .content {
-        display: flex;
-        gap: 20px;
-      }
+        /* Flexbox container for columns */
+        .content {
+            display: flex;
+            gap: 20px; /* Space between columns */
+        }
 
-      .column {
-        flex: 2; /* Each column takes equal width */
-        padding: 10px;
-      }
+        /* First column for the header */
+        .column-header {
+            flex: 1; /* Left column takes 1 part */
+            padding: 10px;
+        }
 
-      .column img {
-        max-width: 100%; /* Ensure image scales within column */
-        height: auto;
-      }
+        /* Second column for the image and text */
+        .column-main {
+            flex: 3; /* Right column takes 3 parts */
+            padding: 10px;
+        }
+
+        .column-main img {
+            max-width: 100%; /* Ensure image scales within column */
+            height: auto;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="wrapper">
- 
+        <!-- Start of column layout -->
+        <div class="content">
+            <!-- First column: Header -->
+            <div class="column-header">
+                <header>
+                    <h1>ZHU Yixin</h1>
+                    <p>PhD Candidate<br>Chinese University of Hong Kong</p>
+                    <h3><a href="https://zhuyixin98.github.io/">Home</a></h3>
+                    <h3><a href="https://zhuyixin98.github.io/research.html">Research</a></h3> 
+                    <h3><a href="https://zhuyixin98.github.io/CV (8).pdf">CV</a></h3> 
+                    <br>
+                </header>
+            </div>
 
-      <!-- Start of column layout -->
-      <div class="content">
-        
-        <!-- First column: Image -->
-        <div class="column">     <header>
-        <h1>ZHU Yixin</h1>
-        <p>PhD Candidate<br>Chinese University of Hong Kong</p>
-        <h3><a href="https://zhuyixin98.github.io/">Home</a></h3>
-        <h3><a href="https://zhuyixin98.github.io/research.html">Research</a></h3> 
-        <h3><a href="https://zhuyixin98.github.io/CV (8).pdf">CV</a></h3> 
-        <br>
-      </header>
-         
+            <!-- Second column: Image and Text -->
+            <div class="column-main">
+                <img src="Weixin Image_20241031165215.jpg" height="250" width="180" alt="Weixin Image">
+                <p>I am currently a PhD candidate at the Department of Decisions, Operations, and Technology of CUHK Business School. I obtained my BS in Management Science from Sun Yat-sen University in 2020.</p>
+                <p>My research interests include Supply chain disruption management and Platform dynamic pricing.</p>
+            </div>
         </div>
-
-        <!-- Second column: Text -->
-        <div class="column">
-           <img src="Weixin Image_20241031165215.jpg" height="200" width="150" alt="Weixin Image">
-          <p>I am currently a PhD candidate at the Department of Decisions, Operations, and Technology of CUHK Business School. I obtained my BS in Management Science from Sun Yat-sen University in 2020.</p>
-          <p>My research interests include Supply chain disruption management and Platform dynamic pricing.</p>
-        </div>
-      </div>
-      <!-- End of column layout -->
+        <!-- End of column layout -->
     </div>
     <script src="javascripts/scale.fix.js"></script>
-  </body>
+</body>
 </html>
